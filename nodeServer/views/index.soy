@@ -1,0 +1,35 @@
+{namespace index}
+
+/**
+ * @param title
+ */
+{template .welcome}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{$title}</title>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='/stylesheets/style.css' type='text/css' media='screen' charset='utf-8'/>
+    <!-- make sure that the baseURL is available to require before it tries to load data-main. -->
+    <script src="scripts/config.js"></script>
+    <!-- data-main attribute tells require.js to load
+        scripts/main.js after require.js loads. -->
+    <script data-main="/scripts/main.js" src="/scripts/modules/r-2.1.1.7.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+  </head>
+  <body>
+    <div class="mainDiv" id="mainDiv">
+      <h1>{$title}</h1>
+      <img src="http://1.2.3.4:3001/?action=stream" class="mainimg" id="mainimg">
+      <p value="?" id="text1" class="text1">?</p>
+    </div>
+    <div class="buttonsdiv">
+      <input type="button" value="Send Text to Speech" id="sendspeechbutton" onclick="sendSpeech()">
+      <input type="button" value="Toggle Flashlight" id="flashlightbutton" onclick="switchFlash()">
+    </div>
+  </body>
+</html>
+{/template}
