@@ -1,4 +1,5 @@
-cd nodeserver
+cd nodeServer
 
-#replace the /home...node-v0.10.../node with the directory of the node executable.
+echo "Starting node server."
  /usr/local/bin/node ./nodeServer/app.js
+echo "DONE starting node server."
